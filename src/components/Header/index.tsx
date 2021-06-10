@@ -6,23 +6,19 @@ interface HeaderProps {
 }
 
 export function Header({ mudouPagina, paginaSelecionada }: HeaderProps) {
-    function clickouBotaoPagina(pagina: string) {
-        mudouPagina(pagina);
-    }
-
     return (
         <Container>
             <Conteudo>
                 <BotaoPagina
                     type="button"
-                    onClick={() => clickouBotaoPagina('clubes')}
+                    onClick={() => mudouPagina('clubes')}
                     ativo={paginaSelecionada === 'clubes'}
                 >
                     Clubes
                 </BotaoPagina>
                 <BotaoPagina
                     type="button"
-                    onClick={() => clickouBotaoPagina('partidas')}
+                    onClick={() => mudouPagina('partidas')}
                     ativo={paginaSelecionada === 'partidas'}
                 >
                     Partidas
